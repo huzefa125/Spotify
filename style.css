@@ -1,0 +1,118 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #121212;
+  color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.slidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #000;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
+}
+
+/* First navigation box (Home, Search) */
+.slidebar-nav {
+  background-color: #1a1a1a;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.slidebar-nav ul {
+  list-style: none;
+}
+
+.slidebar-nav ul li {
+  margin: 15px 0;
+}
+
+.slidebar-nav ul li a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: white;
+  font-size: 14px;
+}
+
+.logo img {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+/* Second box: Library */
+.box2 {
+  background-color: #1a1a1a;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* Scrollable area */
+.slidebar-scroll {
+  overflow-y: auto;
+  max-height: 300px;
+  margin-top: 15px;
+}
+
+/* Custom Scrollbar */
+.slidebar-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.slidebar-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.slidebar-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+/* Playlist Creation Block */
+.create-playlist {
+  background-color: #242424;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 10px;
+}
+
+.create-playlist h4 {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.create-playlist p {
+  font-size: 12px;
+  color: #b3b3b3;
+  margin-bottom: 10px;
+}
+
+.create-playlist button {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.create-playlist button:hover {
+  background-color: #f1f1f1;
+}
