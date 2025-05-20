@@ -215,6 +215,7 @@ body {
   border-radius: 10px;
   position: relative;
   transition: background 0.3s;
+  cursor: pointer;
 }
 
 .item:hover {
@@ -248,11 +249,15 @@ body {
   justify-content: center;
   align-items: center;
   opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, transform 0.2s ease;
 }
 
 .item:hover .play-btn {
   opacity: 1;
+}
+
+.play-btn:hover {
+  transform: scale(1.1);
 }
 
 .footer-section {
@@ -312,4 +317,116 @@ body {
 
 .social-links i:hover {
   color: #1db954;
+}
+
+/* Now Playing Bar */
+.now-playing {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #181818;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  border-top: 1px solid #282828;
+}
+
+.now-playing-info {
+  display: flex;
+  align-items: center;
+  width: 300px;
+}
+
+.now-playing-info img {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+
+.now-playing-text h4 {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.now-playing-text p {
+  font-size: 12px;
+  color: #b3b3b3;
+}
+
+.player-controls {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.control-buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.control-buttons button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.control-buttons button.play-pause {
+  background: white;
+  color: black;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-container {
+  width: 100%;
+  max-width: 600px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 4px;
+  background: #535353;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.progress {
+  height: 100%;
+  background: #b3b3b3;
+  border-radius: 2px;
+  width: 0%;
+}
+
+.volume-controls {
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.volume-slider {
+  width: 100px;
+  height: 4px;
+  background: #535353;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.volume-slider .volume-progress {
+  height: 100%;
+  background: #b3b3b3;
+  border-radius: 2px;
+  width: 100%;
 }
